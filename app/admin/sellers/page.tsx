@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 
 interface SellerInfo {
   id: string;
@@ -19,7 +19,7 @@ interface SellerInfo {
   };
 }
 
-export default function AdminSellers() {
+function AdminSellersContent() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -190,5 +190,13 @@ export default function AdminSellers() {
           </div>
         )}
     </div>
+  );
+}
+
+export default function AdminSellers() {
+  return (
+    <Suspense fallback={null}>
+      <AdminSellersContent />
+    </Suspense>
   );
 }

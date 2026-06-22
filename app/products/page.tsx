@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import ProductCardList from "@/components/product-card-list"
@@ -77,7 +77,7 @@ function Pagination({
 
 /* ---------------- MAIN PAGE ---------------- */
 
-export default function ProductsPage() {
+function ProductsContent() {
   const searchParams = useSearchParams()
 
   const [products, setProducts] = useState<Product[]>([])
@@ -270,5 +270,13 @@ export default function ProductsPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={null}>
+      <ProductsContent />
+    </Suspense>
   )
 }
