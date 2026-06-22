@@ -31,7 +31,7 @@ export default function DashboardSidebarShell({
 
   return (
     <div className="min-h-screen bg-[#fafafa] text-black">
-      <div className="mx-auto flex min-h-screen max-w-7xl flex-col md:flex-row">
+  <div className="mx-auto flex min-h-screen w-full max-w-[1920px] flex-col md:flex-row">
         <aside className="border-b border-black bg-white md:min-h-screen md:w-72 md:border-r md:border-b-0">
           <div className="border-b border-black px-6 py-6">
             <div className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">

@@ -1,10 +1,6 @@
 "use client"
 
-<<<<<<< HEAD
-import { Suspense, useState } from "react"
-=======
 import { useState, Suspense } from "react"
->>>>>>> 4cd7cefa9ad39c5d64070231c11bee14c9b60017
 import { signIn } from "next-auth/react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
@@ -107,16 +103,10 @@ function SignInForm() {
 
 export default function SignIn() {
   return (
-<<<<<<< HEAD
-    <Suspense fallback={null}>
-      <SignInForm />
-    </Suspense>
-=======
     <div className="min-h-screen flex items-center justify-center bg-white px-4">
       <Suspense fallback={<div className="text-center p-4">Loading...</div>}>
         <SignInForm />
       </Suspense>
     </div>
->>>>>>> 4cd7cefa9ad39c5d64070231c11bee14c9b60017
   )
 }
