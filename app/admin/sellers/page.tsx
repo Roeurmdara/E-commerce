@@ -2,7 +2,11 @@
 
 import { useSession } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
+<<<<<<< HEAD
 import { Suspense, useEffect, useState } from 'react';
+=======
+import { useEffect, useState, Suspense } from 'react';
+>>>>>>> 4cd7cefa9ad39c5d64070231c11bee14c9b60017
 
 interface SellerInfo {
   id: string;
@@ -19,7 +23,11 @@ interface SellerInfo {
   };
 }
 
+<<<<<<< HEAD
 function AdminSellersContent() {
+=======
+function SellersContent() {
+>>>>>>> 4cd7cefa9ad39c5d64070231c11bee14c9b60017
   const { data: session, status } = useSession();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -195,8 +203,13 @@ function AdminSellersContent() {
 
 export default function AdminSellers() {
   return (
+<<<<<<< HEAD
     <Suspense fallback={null}>
       <AdminSellersContent />
+=======
+    <Suspense fallback={<div className="flex min-h-[40vh] items-center justify-center"><div>Loading...</div></div>}>
+      <SellersContent />
+>>>>>>> 4cd7cefa9ad39c5d64070231c11bee14c9b60017
     </Suspense>
   );
 }

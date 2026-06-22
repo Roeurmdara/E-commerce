@@ -220,7 +220,7 @@ export default async function Home({
       {/* TOP RIGHT BANNER */}
       <div className="relative overflow-hidden group">
         <img
-          src="https://i.pinimg.com/736x/d4/39/7f/d4397ffbcc8d154b481745df8c849335.jpg"
+          src="https://i.pinimg.com/1200x/b7/8b/dc/b78bdc63a13c81e7796764d89f69948d.jpg"
           alt="Footwear"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
